@@ -1,0 +1,40 @@
+
+@import "./utils/variables";
+@import "./utils/map";
+@import "./utils/mixins";
+
+
+@import "./base/base";
+
+@import "./pages/acceuil";
+@import "./pages/menu1";
+@import "./pages/menu2";
+@import "./pages/menu3";
+@import "./pages/menu4";
+
+@import "./components/bouton";
+
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/menu-section";
+@import "./layouts/home-restaurants";
+@import "./layouts/home-operations";
+@import "./layouts/menu-section_component";
+@import "./layouts/menu-section_transition";
+@import "./layouts/loading";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

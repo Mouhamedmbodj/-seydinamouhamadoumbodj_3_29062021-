@@ -1,0 +1,72 @@
+
+.menu-section_component_transition
+{
+    transition:700ms ease;
+    width:0px;
+    margin:0px;
+    &_icone{
+      opacity:0;
+      color:$color-fifth;
+      
+    }
+}
+
+.menu-section_component_dishes{
+        
+     &:hover > .menu-section_component_dishes_title .menu-section_component_dishes_description .element_description{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:190px;
+    }
+    
+    &:hover > .menu-section_component_transition{
+        background:$color-tertiary;
+        border-radius:0px 15px 15px 0px;
+        height:100%;
+        width:30%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition:100ms ease;
+    } 
+    
+     &:hover > .menu-section_component_transition .menu-section_component_transition_icone {
+       transform:rotate(360deg);
+       transition:750ms ease;
+       color:$color-fifth;
+       opacity:1;
+    }
+}
+
+
+.entrees .menu-section_component_dishes{
+   animation-name: dishes;
+    animation-duration:5s;
+}
+
+
+.plats .menu-section_component_dishes{
+   animation-name: dishes;
+    animation-duration:6s;
+}
+
+.desserts .menu-section_component_dishes{
+    animation-name: dishes;
+    animation-duration:7s;
+}
+
+@keyframes dishes {
+  0%   {visibility: hidden;
+        transform:scale(0);
+        animation-fill-mode:forwards;
+           
+}
+ 
+  100% {visibility: visible;
+        transition:1000ms ease;
+        transform:scale(1); 
+         animation-fill-mode:forwards;
+            
+  }
+}

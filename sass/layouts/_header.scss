@@ -1,0 +1,48 @@
+.header-menu{
+    width:100%;
+    margin:0px;
+    height:auto;
+    display:flex;
+    align-items:center;
+    padding:20px 0px 20px 0px;
+
+     @include tab-only{
+        width:100%
+       }
+
+     @include mobile-only{
+        width:100%;
+        justify-content:space-around
+       };
+
+
+    &_logo{
+       width:auto;
+       display:block;
+       margin-left: auto;
+       margin-right: auto;
+
+    @include tab-only{
+       height:50px;       
+      }
+
+    @include mobile-only{
+        height:43px;
+       }  
+
+    };
+
+    & a{
+        color:$color-sixth;
+        font-size:1.5em;
+        margin-left:70px;
+
+
+       @include mobile-only{
+         margin:0px;
+         margin-left:5%;
+       }  
+  
+    }
+
+}

@@ -1,0 +1,60 @@
+
+.bloc-page{
+  margin-left:auto;
+  animation:page 4s both
+}
+
+@keyframes page{
+  0%{
+    margin-left:-1900px;
+  }
+}
+
+
+
+.loader{
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  animation:loader 3.7s 100ms ease; 
+}
+
+@keyframes loader{
+  0%{
+    height:200px;
+    width:200px;
+    margin:auto;
+    border:16px solid white;
+    border-radius:50%;
+    border-top-color:$color-secondary;
+    transform:rotate(360deg);
+  }
+
+  100%{
+    border-bottom-color:$color-tertiary;
+
+  }
+}
+
+
+.container{
+    animation:container 100ms 1.5s both;
+    display:flex;
+    align-items:center;
+    background:red;
+    width:100%;
+    height:100%;
+    position:fixed;
+}
+
+@keyframes container{
+  0%{
+    background:white; 
+    
+
+  }
+
+  100%{
+      margin-left:-9999px 
+    }
+}

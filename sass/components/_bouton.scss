@@ -1,0 +1,42 @@
+.button
+{
+    background:$color-primary;
+    padding:15px;
+    border-radius:25px;
+    color:$color-fifth;
+    font-size:1em;
+    cursor:pointer;
+    bottom:0;
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:0px;
+}
+
+.menu-button{
+    margin:40px 0px 0px 38%;
+    font-size:1.2em;
+    width:300px;
+  
+
+    @include tab-only{
+       display: block;
+    margin-left: auto;
+    margin-right: auto 
+   
+    }
+    
+    @include mobile-only{
+      width:50%;
+      display: block;
+    margin-left: auto;
+    margin-right: auto 
+    }
+}
+
+
+.button:hover{
+  background-color:lighten($color-primary, 3%);
+  transform:scale(1)
+}

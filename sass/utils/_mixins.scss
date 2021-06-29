@@ -1,0 +1,13 @@
+@mixin mobile-only{
+    @media screen and (max-width:(668px)){
+        @content
+    }
+};
+
+
+@mixin tab-only{
+    @media screen and (max-width:map-get($breakpoints, tablette)) and (min-width:(600px)){
+        @content
+    }
+};
+

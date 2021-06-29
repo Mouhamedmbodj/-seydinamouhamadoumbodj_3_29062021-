@@ -1,0 +1,60 @@
+
+body
+{
+    margin:0;
+    padding:0;
+     @include tab-only{
+        margin:0px;
+    }
+
+     @include mobile-only{
+       padding:0;
+       margin:0px;
+
+    }
+};
+
+.bloc-page
+{
+    font-family:'Roboto';
+    width:1300px;
+    height:auto;
+    margin:auto;
+    @include tab-only{
+        width:90%;
+        margin:auto;
+    }
+
+    @include mobile-only{
+        width:100%;
+        margin:0px;
+        padding:0px;
+    }
+};
+
+
+.menu-section{
+
+    & h1{
+       font-family:'shrikhand'
+    };
+}
+
+.bloc-page-menu
+{
+
+     @include tab-only{
+        width:90%;
+        margin:auto;
+    };
+
+    @include mobile-only{
+        width:100%;
+        margin:0px;
+    }
+
+   &_img{
+       width:100%;
+   }
+   
+}
