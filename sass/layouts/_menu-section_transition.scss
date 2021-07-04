@@ -1,7 +1,7 @@
 
 .menu-section_component_transition
 {
-    transition:700ms ease;
+    transition:1s ease;
     width:0px;
     margin:0px;
     &_icone{
@@ -28,7 +28,7 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        transition:100ms ease;
+        transition:1s ease;
     } 
     
      &:hover > .menu-section_component_transition .menu-section_component_transition_icone {
@@ -36,37 +36,31 @@
        transition:750ms ease;
        color:$color-fifth;
        opacity:1;
+       font-size:1.2em;
     }
 }
 
 
 .entrees .menu-section_component_dishes{
-   animation-name: dishes;
-    animation-duration:5s;
+   animation: dishes 600ms
 }
 
 
 .plats .menu-section_component_dishes{
-   animation-name: dishes;
-    animation-duration:6s;
+   animation: dishes 700ms
 }
 
 .desserts .menu-section_component_dishes{
-    animation-name: dishes;
-    animation-duration:7s;
+    animation: dishes 800ms
 }
 
 @keyframes dishes {
-  0%   {visibility: hidden;
-        transform:scale(0);
-        animation-fill-mode:forwards;
-           
+  0%   {
+    margin-bottom:999px;
+                
 }
  
-  100% {visibility: visible;
-        transition:1000ms ease;
-        transform:scale(1); 
-         animation-fill-mode:forwards;
-            
+  100% {
+        margin-bottom:0px;
   }
 }

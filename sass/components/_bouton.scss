@@ -1,6 +1,6 @@
 .button
 {
-    background:$color-primary;
+    background: linear-gradient($color-secondary , $color-primary );;
     padding:15px;
     border-radius:25px;
     color:$color-fifth;
@@ -37,6 +37,6 @@
 
 
 .button:hover{
-  background-color:lighten($color-primary, 3%);
-  transform:scale(1)
+  opacity:(0.93);
+  transform:scale(1.1)
 }

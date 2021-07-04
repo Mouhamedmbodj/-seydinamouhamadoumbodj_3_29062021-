@@ -14,6 +14,13 @@
        font-size:1.5em;
        width:auto;
        margin:20px;
+        @include mobile-only{      
+           width:320px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:45px;
+            margin-bottom:30px;
+         }  
    }
 
 
@@ -29,14 +36,23 @@
        color:black;
        margin:0px 40px 20px 20px;
        background:$color-seventh;
-       width:300px;
-       padding:20px;
+       width:325px;
+       padding:25px 0px 25px 0px ;
        box-shadow:8px 8px 8px $color-fourth;
-       border-radius:15px;
+       border-radius:25px;
        text-decoration:none;
        display:flex;
        justify-content:space-between;
-       align-items:center;
+       align-items:center; 
+         @include mobile-only{      
+            margin-left:auto;
+            margin-right:auto;
+         }  
+
+         &:hover{
+             background:lighten($color-secondary, 23%);
+         }
+
       } 
 
    }
@@ -52,7 +68,7 @@
      color:$color-fifth;
      border-radius:50%;
      padding:8px 8px 2px 8px;
-     margin-left:-27px;
+     margin-left:-10px;
      font-size:0.8em;
 
      @include mobile-only{
@@ -66,8 +82,8 @@
       font-weight:bold;
       width:10%;
       margin-left:20px;
+      font-size:1.2em;
       @include mobile-only{
-             font-size:1em;
              text-align:center;
              margin-left:10px;
              width:20%

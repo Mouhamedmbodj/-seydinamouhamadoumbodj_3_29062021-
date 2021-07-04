@@ -11,10 +11,15 @@
             width:100%
         };
 
+     @include mobile-only{      
+            
+        };    
+
     &_icone{
          margin-top:0px;
         -webkit-text-stroke: 1.3px black;
         color:white;
+        background:white;
         font-size:1.6em;
         margin:0px 25px 0px 0px; 
         
@@ -22,7 +27,7 @@
             -webkit-text-stroke: 1.3px $color-primary;
             color:$color-primary;
             transform:scale(1);
-            transition:1500ms ease-in;
+            transition:1000ms ease;
         }
 
     };
@@ -30,13 +35,17 @@
 
     &_element
     {
-        width:350px;
+        width:325px;
         height:auto;
         display:flex;
         flex-direction:column;
         justify-content:stretch;
         margin:0px 25px 25px 0px;
         text-decoration:none; 
+         @include mobile-only{      
+            margin-left:auto;
+            margin-right:auto;
+         }   
         
     &_image{
         width:100%;
@@ -64,7 +73,7 @@
             width:95%;
             display:flex;
             justify-content:space-evenly;
-         }  
+         }      
 };
 
 
@@ -72,7 +81,12 @@
 {
     font-size:2em;
     font-weight:bold;
-    margin:0px 0px 20px 20px
+    margin:0px 0px 20px 20px;
+     @include mobile-only{      
+            width:325px;
+            margin-left:auto;
+            margin-right:auto;
+         }       
 
 };
 

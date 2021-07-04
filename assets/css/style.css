@@ -16,7 +16,7 @@ body {
 
 .bloc-page {
   font-family: "Roboto";
-  width: 1300px;
+  width: 90%;
   height: auto;
   margin: auto;
 }
@@ -141,7 +141,7 @@ body {
 }
 
 .button {
-  background: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   padding: 15px;
   border-radius: 25px;
   color: white;
@@ -177,8 +177,8 @@ body {
 }
 
 .button:hover {
-  background-color: #9b63df;
-  transform: scale(1);
+  opacity: 0.93;
+  transform: scale(1.1);
 }
 
 .header-menu {
@@ -294,6 +294,7 @@ body {
     padding: 0px;
     margin: 0px;
     width: 100%;
+    padding-bottom: 40px;
   }
 }
 
@@ -330,7 +331,7 @@ body {
 
 .menu_heart_icone {
   -webkit-text-stroke: 1.3px black;
-  color: white;
+  color: #F9F9F9;
   font-size: 1.3em;
   margin: 0px 25px 0px 0px;
   cursor: pointer;
@@ -339,7 +340,7 @@ body {
   -webkit-text-stroke: 1.3px #9356DC;
   color: #9356DC;
   transform: scale(1);
-  transition: 1500ms ease-in;
+  transition: 1000ms ease;
 }
 
 .bloc-menu {
@@ -374,6 +375,7 @@ body {
   margin-top: 0px;
   -webkit-text-stroke: 1.3px black;
   color: white;
+  background: white;
   font-size: 1.6em;
   margin: 0px 25px 0px 0px;
 }
@@ -381,16 +383,22 @@ body {
   -webkit-text-stroke: 1.3px #9356DC;
   color: #9356DC;
   transform: scale(1);
-  transition: 1500ms ease-in;
+  transition: 1000ms ease;
 }
 .home-restaurant_element {
-  width: 350px;
+  width: 325px;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   margin: 0px 25px 25px 0px;
   text-decoration: none;
+}
+@media screen and (max-width: 668px) {
+  .home-restaurant_element {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .home-restaurant_element_image {
   width: 100%;
@@ -422,6 +430,13 @@ body {
   font-size: 2em;
   font-weight: bold;
   margin: 0px 0px 20px 20px;
+}
+@media screen and (max-width: 668px) {
+  .home-restaurant_title {
+    width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .restaurant_news {
@@ -474,6 +489,15 @@ body {
   width: auto;
   margin: 20px;
 }
+@media screen and (max-width: 668px) {
+  .home-operations_title {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+}
 .home-operations_bloc {
   display: flex;
   width: auto;
@@ -485,14 +509,23 @@ body {
   color: black;
   margin: 0px 40px 20px 20px;
   background: #F9F9F9;
-  width: 300px;
-  padding: 20px;
+  width: 325px;
+  padding: 25px 0px 25px 0px;
   box-shadow: 8px 8px 8px #EAEDF0;
-  border-radius: 15px;
+  border-radius: 25px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 668px) {
+  .home-operations_bloc_option {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.home-operations_bloc_option:hover {
+  background: #ffeefa;
 }
 
 .home-operations--number {
@@ -500,7 +533,7 @@ body {
   color: white;
   border-radius: 50%;
   padding: 8px 8px 2px 8px;
-  margin-left: -27px;
+  margin-left: -10px;
   font-size: 0.8em;
 }
 @media screen and (max-width: 668px) {
@@ -513,10 +546,10 @@ body {
   font-weight: bold;
   width: 10%;
   margin-left: 20px;
+  font-size: 1.2em;
 }
 @media screen and (max-width: 668px) {
   .home-operations_icone {
-    font-size: 1em;
     text-align: center;
     margin-left: 10px;
     width: 20%;
@@ -573,6 +606,7 @@ body {
   height: 100%;
   width: 100%;
   margin-left: 10px;
+  font-weight: bold;
 }
 .menu-section_component_dishes_description {
   display: flex;
@@ -581,6 +615,7 @@ body {
   margin: 5px 0px 0px 0px;
   color: #2C2C2C;
   white-space: nowrap;
+  font-weight: normal;
 }
 .menu-section_component_dishes_price {
   font-weight: bold;
@@ -595,7 +630,7 @@ body {
 }
 
 .menu-section_component_transition {
-  transition: 700ms ease;
+  transition: 1s ease;
   width: 0px;
   margin: 0px;
 }
@@ -618,44 +653,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 100ms ease;
+  transition: 1s ease;
 }
 .menu-section_component_dishes:hover > .menu-section_component_transition .menu-section_component_transition_icone {
   transform: rotate(360deg);
   transition: 750ms ease;
   color: white;
   opacity: 1;
+  font-size: 1.2em;
 }
 
 .entrees .menu-section_component_dishes {
-  animation-name: dishes;
-  animation-duration: 5s;
+  animation: dishes 600ms;
 }
 
 .plats .menu-section_component_dishes {
-  animation-name: dishes;
-  animation-duration: 6s;
+  animation: dishes 700ms;
 }
 
 .desserts .menu-section_component_dishes {
-  animation-name: dishes;
-  animation-duration: 7s;
+  animation: dishes 800ms;
 }
 
 @keyframes dishes {
   0% {
-    visibility: hidden;
-    transform: scale(0);
-    animation-fill-mode: forwards;
+    margin-bottom: 999px;
   }
   100% {
-    visibility: visible;
-    transition: 1000ms ease;
-    transform: scale(1);
-    animation-fill-mode: forwards;
+    margin-bottom: 0px;
   }
 }
-.bloc-page {
+.bloc-page_home {
   margin-left: auto;
   animation: page 4s both;
 }

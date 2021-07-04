@@ -35,7 +35,7 @@
 .menu_heart_icone
 {
         -webkit-text-stroke: 1.3px black;
-        color:white;
+        color:$color-seventh;
         font-size:1.3em;
         margin:0px 25px 0px 0px; 
         cursor:pointer;
@@ -44,7 +44,7 @@
             -webkit-text-stroke: 1.3px $color-primary;
             color:$color-primary;
             transform:scale(1);
-            transition:1500ms ease-in;
+            transition:1000ms ease;
         }
 }
 
