@@ -1,56 +1,57 @@
 .menu-section_component{
-    width:auto;
+    width:100%;
     height:auto;
-    margin-bottom:20px;
+    margin-bottom:25px;
     
     @include mobile-only{
-        width:90%;
-        margin-left:20px
+        width:100%;
         };
     
     &_title{
         color:$color-sixth;
         border-bottom:3px solid $color-tertiary;
         width:30px;
+        font-size:1.3em;
+        margin-left:20px;
     };
 
     &_dishes{
-       width:350px;
-       height:70px;
+       width:95%;
+       height:80px;
        display:flex;
-       border-radius:15px;
+       border-radius:20px;
        background:$color-fifth;
        box-shadow:5px 5px 5px $color-eighth;
-       margin:15px 0px 0px 0px ;
+       margin:20px 0px 20px 0px ;
+       margin-left:auto;
+       margin-right:auto;
+       padding-left:10px;
        cursor:pointer;
         
-
        @include mobile-only{
-        width:100%;
+        width:87%;
         };
 
         &_title{
             display:flex;
             flex-direction:column;
-            height:100%;
+            justify-content:space-between;
+            height:auto;
             width:100%;
-            margin-left:10px ;
             font-weight:bold;
         }
 
         &_description{
             display:flex;
             justify-content:space-between;
-            width:100%;
-            margin:5px 0px 0px 0px;
+            width:auto;
             color:$color-sixth;
-            white-space: nowrap;
             font-weight:normal;
         }
 
         &_price{
             font-weight:bold;
-            margin-right:20px;
+            margin-right:10px;
         }
     }
 }
@@ -59,7 +60,8 @@
 .element_description{
      white-space: nowrap;
      overflow: hidden;
-    text-overflow: ellipsis;
-    width:90%;
+     text-overflow: ellipsis;
+     width:55%;
+
 }
 

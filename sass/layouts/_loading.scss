@@ -1,7 +1,7 @@
 
 .bloc-page_home{
   margin-left:auto;
-  animation:page 4s both
+  animation:page 16s both
 }
 
 @keyframes page{
@@ -10,38 +10,41 @@
   }
 }
 
-
-
 .loader{
-  height:200px;
-  width:200px;
+  height:300px;
+  width:300px;
   border-radius:50%;
-  animation:loader 3.7s 100ms ease; 
+  margin:auto;
+  border:16px solid white;
+  animation:loader 1500ms 10ms infinite ease;  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+    @include mobile-only{
+          width:200px;
+          height:200px;
+        };
 }
 
 @keyframes loader{
   0%{
-    height:200px;
-    width:200px;
-    margin:auto;
-    border:16px solid white;
-    border-radius:50%;
     border-top-color:$color-secondary;
-    transform:rotate(360deg);
+    transform:rotate(180deg);
   }
 
   100%{
     border-bottom-color:$color-tertiary;
-
+     
   }
 }
 
 
 .container{
-    animation:container 100ms 1.5s both;
+    animation:container 10ms 4.5s both ;
     display:flex;
     align-items:center;
-    background:red;
+    justify-content:center;
     width:100%;
     height:100%;
     position:fixed;
@@ -57,4 +60,17 @@
   100%{
       margin-left:-9999px 
     }
+}
+
+.bienvenue{
+  font-family:'shrikhand';
+   background:-webkit-linear-gradient(350deg,$color-tertiary,$color-secondary);
+            -webkit-background-clip: text ;
+            -webkit-text-fill-color: transparent; 
+            color:$color-primary;
+            font-size:1.2em;
+            animation:bienvenue 1500ms 100ms  infinite;
+            @include mobile-only{
+             font-size:0.8em;
+        };
 }

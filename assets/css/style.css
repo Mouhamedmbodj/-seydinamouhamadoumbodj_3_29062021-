@@ -1,3 +1,25 @@
+@keyframes heart {
+  100% {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #9356DC;
+  }
+}
+@keyframes bienvenue {
+  0% {
+    background: -webkit-linear-gradient(350deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #9356DC;
+  }
+  100% {
+    background: -webkit-linear-gradient(300deg, #99E2D0, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #9356DC;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -16,13 +38,13 @@ body {
 
 .bloc-page {
   font-family: "Roboto";
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
 @media screen and (max-width: 1100px) and (min-width: 600px) {
   .bloc-page {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 }
@@ -40,7 +62,7 @@ body {
 
 @media screen and (max-width: 1100px) and (min-width: 600px) {
   .bloc-page-menu {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 }
@@ -122,8 +144,10 @@ body {
   }
 }
 .home-introduction h2 {
-  color: #A9AAAB;
   font-size: 1.3em;
+  font-weight: normal;
+  opacity: 0.7;
+  margin: -20px 0px 40px 0px;
 }
 @media screen and (max-width: 668px) {
   .home-introduction h2 {
@@ -141,7 +165,7 @@ body {
 }
 
 .button {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(350deg, #9356DC, #FF79DA);
   padding: 15px;
   border-radius: 25px;
   color: white;
@@ -153,6 +177,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 0px;
+  transition: 700ms ease-out;
 }
 
 .menu-button {
@@ -179,6 +204,7 @@ body {
 .button:hover {
   opacity: 0.93;
   transform: scale(1.1);
+  transition: 700ms ease-out;
 }
 
 .header-menu {
@@ -307,19 +333,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.5em;
 }
 .menu-section_component_bloc {
-  margin: 0px 0px 0px 20px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 95%;
+  flex-direction: column;
+  width: 100%;
 }
 @media screen and (max-width: 1100px) and (min-width: 600px) {
   .menu-section_component_bloc {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 }
 @media screen and (max-width: 668px) {
@@ -332,15 +357,14 @@ body {
 .menu_heart_icone {
   -webkit-text-stroke: 1.3px black;
   color: #F9F9F9;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 0px 25px 0px 0px;
   cursor: pointer;
 }
 .menu_heart_icone:hover {
   -webkit-text-stroke: 1.3px #9356DC;
-  color: #9356DC;
-  transform: scale(1);
-  transition: 1000ms ease;
+  display: block;
+  animation: heart 1s ease both;
 }
 
 .bloc-menu {
@@ -375,29 +399,28 @@ body {
   margin-top: 0px;
   -webkit-text-stroke: 1.3px black;
   color: white;
-  background: white;
   font-size: 1.6em;
   margin: 0px 25px 0px 0px;
 }
 .home-restaurant_icone:hover {
   -webkit-text-stroke: 1.3px #9356DC;
-  color: #9356DC;
   transform: scale(1);
-  transition: 1000ms ease;
+  animation: heart 1000ms ease both;
 }
 .home-restaurant_element {
-  width: 325px;
+  width: 40%;
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
-  margin: 0px 25px 25px 0px;
+  margin: auto;
+  margin-bottom: 25px;
   text-decoration: none;
 }
 @media screen and (max-width: 668px) {
   .home-restaurant_element {
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
   }
 }
 .home-restaurant_element_image {
@@ -412,31 +435,31 @@ body {
 }
 
 .home-restaurant_bloc {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
 }
 @media screen and (max-width: 1100px) and (min-width: 600px) {
   .home-restaurant_bloc {
-    width: 95%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 668px) {
+  .home-restaurant_bloc {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
   }
 }
 
 .home-restaurant_title {
   font-size: 2em;
-  font-weight: bold;
-  margin: 0px 0px 20px 20px;
-}
-@media screen and (max-width: 668px) {
-  .home-restaurant_title {
-    width: 325px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  width: 90%;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
 
 .restaurant_news {
@@ -485,18 +508,11 @@ body {
   }
 }
 .home-operations_title {
-  font-size: 1.5em;
-  width: auto;
-  margin: 20px;
-}
-@media screen and (max-width: 668px) {
-  .home-operations_title {
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 45px;
-    margin-bottom: 30px;
-  }
+  font-size: 2em;
+  width: 90%;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
 .home-operations_bloc {
   display: flex;
@@ -509,124 +525,139 @@ body {
   color: black;
   margin: 0px 40px 20px 20px;
   background: #F9F9F9;
-  width: 325px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
   padding: 25px 0px 25px 0px;
   box-shadow: 8px 8px 8px #EAEDF0;
   border-radius: 25px;
   text-decoration: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
 }
 @media screen and (max-width: 668px) {
   .home-operations_bloc_option {
     margin-left: auto;
     margin-right: auto;
+    width: 95%;
   }
 }
 .home-operations_bloc_option:hover {
   background: #ffeefa;
+}
+.home-operations_bloc_option:hover > .home-operations_icone {
+  color: #9356DC;
+  opacity: 1;
 }
 
 .home-operations--number {
   background: #9356DC;
   color: white;
   border-radius: 50%;
-  padding: 8px 8px 2px 8px;
   margin-left: -10px;
-  font-size: 0.8em;
+  font-size: 1.5em;
+  padding: 5px;
+  width: 30px;
+  text-align: center;
 }
 @media screen and (max-width: 668px) {
   .home-operations--number {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 }
 .home-operations_icone {
-  color: grey;
+  color: black;
+  opacity: 0.7;
   font-weight: bold;
   width: 10%;
-  margin-left: 20px;
-  font-size: 1.2em;
+  margin-left: 10%;
+  font-size: 2em;
 }
 @media screen and (max-width: 668px) {
   .home-operations_icone {
     text-align: center;
-    margin-left: 10px;
+    margin-left: 0px;
+    font-size: 1.2em;
     width: 20%;
   }
 }
 .home-operations_icone--color {
   color: #9356DC;
+  opacity: 1;
 }
 .home-operations_title_option {
-  font-size: 1em;
-  width: 95%;
-  margin-left: 3%;
+  font-size: 2em;
+  margin-left: 10%;
 }
 @media screen and (max-width: 668px) {
   .home-operations_title_option {
     font-size: 1em;
+    margin-left: 5px;
   }
 }
 
 .menu-section_component {
-  width: auto;
+  width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 668px) {
   .menu-section_component {
-    width: 90%;
-    margin-left: 20px;
+    width: 100%;
   }
 }
 .menu-section_component_title {
   color: #2C2C2C;
   border-bottom: 3px solid #99E2D0;
   width: 30px;
+  font-size: 1.3em;
+  margin-left: 20px;
 }
 .menu-section_component_dishes {
-  width: 350px;
-  height: 70px;
+  width: 95%;
+  height: 80px;
   display: flex;
-  border-radius: 15px;
+  border-radius: 20px;
   background: white;
   box-shadow: 5px 5px 5px #A9AAAB;
-  margin: 15px 0px 0px 0px;
+  margin: 20px 0px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
   cursor: pointer;
 }
 @media screen and (max-width: 668px) {
   .menu-section_component_dishes {
-    width: 100%;
+    width: 87%;
   }
 }
 .menu-section_component_dishes_title {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
+  height: auto;
   width: 100%;
-  margin-left: 10px;
   font-weight: bold;
 }
 .menu-section_component_dishes_description {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin: 5px 0px 0px 0px;
+  width: auto;
   color: #2C2C2C;
-  white-space: nowrap;
   font-weight: normal;
 }
 .menu-section_component_dishes_price {
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .element_description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 90%;
+  width: 55%;
 }
 
 .menu-section_component_transition {
@@ -643,13 +674,18 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 190px;
+  width: auto;
+}
+@media screen and (max-width: 668px) {
+  .menu-section_component_dishes:hover > .menu-section_component_dishes_title .menu-section_component_dishes_description .element_description {
+    width: 170px;
+  }
 }
 .menu-section_component_dishes:hover > .menu-section_component_transition {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   height: 100%;
-  width: 30%;
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -660,32 +696,32 @@ body {
   transition: 750ms ease;
   color: white;
   opacity: 1;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 .entrees .menu-section_component_dishes {
-  animation: dishes 600ms;
+  animation: dishes 1s;
 }
 
 .plats .menu-section_component_dishes {
-  animation: dishes 700ms;
+  animation: dishes 2s;
 }
 
 .desserts .menu-section_component_dishes {
-  animation: dishes 800ms;
+  animation: dishes 3s;
 }
 
 @keyframes dishes {
   0% {
-    margin-bottom: 999px;
+    margin-top: 999px;
   }
   100% {
-    margin-bottom: 0px;
+    margin-top: 0px;
   }
 }
 .bloc-page_home {
   margin-left: auto;
-  animation: page 4s both;
+  animation: page 16s both;
 }
 
 @keyframes page {
@@ -694,31 +730,37 @@ body {
   }
 }
 .loader {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
-  animation: loader 3.7s 100ms ease;
+  margin: auto;
+  border: 16px solid white;
+  animation: loader 1500ms 10ms infinite ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 668px) {
+  .loader {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @keyframes loader {
   0% {
-    height: 200px;
-    width: 200px;
-    margin: auto;
-    border: 16px solid white;
-    border-radius: 50%;
     border-top-color: #FF79DA;
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
   100% {
     border-bottom-color: #99E2D0;
   }
 }
 .container {
-  animation: container 100ms 1.5s both;
+  animation: container 10ms 4.5s both;
   display: flex;
   align-items: center;
-  background: red;
+  justify-content: center;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -730,6 +772,20 @@ body {
   }
   100% {
     margin-left: -9999px;
+  }
+}
+.bienvenue {
+  font-family: "shrikhand";
+  background: -webkit-linear-gradient(350deg, #99E2D0, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #9356DC;
+  font-size: 1.2em;
+  animation: bienvenue 1500ms 100ms infinite;
+}
+@media screen and (max-width: 668px) {
+  .bienvenue {
+    font-size: 0.8em;
   }
 }
 

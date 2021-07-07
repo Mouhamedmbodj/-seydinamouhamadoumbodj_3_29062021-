@@ -6,8 +6,7 @@
     margin:0px;
     &_icone{
       opacity:0;
-      color:$color-fifth;
-      
+      color:$color-fifth;  
     }
 }
 
@@ -17,14 +16,17 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width:190px;
+        width:auto;
+          @include mobile-only{
+          width:170px;
+        };
     }
     
     &:hover > .menu-section_component_transition{
         background:$color-tertiary;
         border-radius:0px 15px 15px 0px;
         height:100%;
-        width:30%;
+        width:20%;
         display:flex;
         align-items:center;
         justify-content:center;
@@ -36,31 +38,32 @@
        transition:750ms ease;
        color:$color-fifth;
        opacity:1;
-       font-size:1.2em;
+       font-size:2em;
     }
 }
 
 
 .entrees .menu-section_component_dishes{
-   animation: dishes 600ms
+   animation: dishes 1s
 }
 
 
 .plats .menu-section_component_dishes{
-   animation: dishes 700ms
+   animation: dishes 2s
 }
 
 .desserts .menu-section_component_dishes{
-    animation: dishes 800ms
+    animation: dishes 3s
 }
+
 
 @keyframes dishes {
   0%   {
-    margin-bottom:999px;
+    margin-top:999px;
                 
 }
  
   100% {
-        margin-bottom:0px;
+        margin-top:0px;
   }
 }
