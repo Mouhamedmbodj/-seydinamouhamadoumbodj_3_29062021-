@@ -1,0 +1,65 @@
+/*elements globals*/
+body
+{
+    font-family:'Roboto';
+    margin:0;
+    padding:0;
+
+   & h1{
+       font-family:'shrikhand'
+      };
+       
+   & .bloc-page{
+       width:100%;
+       height:auto;
+       margin:auto;
+       animation:page 16s both;
+
+       & h1{
+         font-family:'Roboto';
+       }
+   }
+}
+/*button*/
+
+.button{
+  @include button
+}
+
+
+/*header*/
+
+.header{
+  @include header;
+
+  &_home{
+      padding:20px 0px 10px 0px;
+      flex-direction:column;
+  };
+   
+   &_logo{
+       @include header-logo;
+
+       &_home{
+
+          & img{
+             @include tab-only{      
+                height:50px;
+             }  
+
+             @include mobile-only{
+                 height:35px;
+             }
+          }
+        }     
+    }   
+}
+
+
+.footer{
+  @include footer
+}
+
+.heart{
+  @include heart
+}

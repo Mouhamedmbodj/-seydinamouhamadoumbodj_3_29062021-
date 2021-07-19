@@ -1,0 +1,87 @@
+@keyframes heart{
+    0%{
+     
+    };
+
+    100%{
+         background:-webkit-linear-gradient($color-primary,$color-secondary);
+            -webkit-background-clip: text ;
+            -webkit-text-fill-color: transparent; 
+            color:$color-primary;
+    }
+
+}
+
+
+@keyframes bienvenue{
+    0%{
+         background:-webkit-linear-gradient(350deg,$color-primary,$color-secondary);
+            -webkit-background-clip: text ;
+            -webkit-text-fill-color: transparent; 
+            color:$color-primary;
+    }
+
+   
+    100%{
+         background:-webkit-linear-gradient(300deg,$color-tertiary,$color-primary);
+            -webkit-background-clip: text ;
+            -webkit-text-fill-color: transparent; 
+            color:$color-primary;
+    }
+}
+
+@keyframes loader{
+  0%{
+    border-top-color:$color-secondary;
+    transform:rotate(180deg);
+  }
+
+  100%{
+    border-bottom-color:$color-tertiary;
+     
+  }
+}
+
+@keyframes container{
+  0%{
+    background:white; 
+    
+
+  }
+
+  100%{
+      margin-left:-9999px 
+    }
+}
+
+@keyframes page{
+  0%{
+    margin-left:-1900px;
+  }
+}
+
+
+@keyframes dishes {
+  0%   {
+    margin-top:999px;
+                
+}
+ 
+  100% {
+        margin-top:0px;
+  }
+}
+
+
+
+@keyframes validation_icone {
+ 
+  0%{
+    opacity:0; 
+  }
+
+  100%{
+      opacity:1;
+  }
+}
+

@@ -1,0 +1,195 @@
+@mixin mobile-only{
+    @media screen and (max-width:(668px)){
+        @content
+    }
+};
+
+
+@mixin tab-only{
+    @media screen and (max-width: 1100px){
+        @content
+    }
+};
+
+/*header*/
+@mixin header{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    padding:20px 0px 20px 0px;
+};
+
+@mixin header-logo{
+   width:auto;
+   display:block;
+   margin:auto;
+   @include tab-only{      
+              height:50px;
+         }  
+
+         @include mobile-only{
+             height:43px;
+         }
+};
+
+
+/*localistion*/
+@mixin localisation{
+        display:flex;
+        width:100%;
+        height:auto;
+        text-align:center;
+        background:$color-grey;
+        color:$color-black1;
+        font-weight:bold;
+        text-decoration:none;
+        justify-content:center;
+        align-items:center;
+        font-size:1.5em;
+          @include mobile-only{
+             font-size:1.3em;
+         }
+
+};
+
+/*introduction accueil*/
+
+@mixin introduction{
+     width:100%;
+    height:auto;
+    text-align:center;
+    background:$color-grey2;
+    padding:30px 0px 30px 0px;
+
+    @include mobile-only{
+             display:flex;
+             flex-direction:column;
+             align-items:center;
+             width:100%;
+         };
+
+    @include tab-only{      
+            width:100%;
+         }; 
+
+    
+    & h2 {
+        font-size:1.3em;
+        font-weight:normal;
+        opacity:0.7;
+        margin:-20px 0px 40px 0px ;
+         @include mobile-only{
+             font-size:1em
+         }
+    };
+
+    & h1 
+    {
+        font-size:2em;
+        @include mobile-only{
+             font-size:1.5em;
+             width:70%;
+         }
+    };
+};
+
+/*button*/
+
+@mixin button{
+    background: linear-gradient(350deg,$color-primary , $color-secondary );
+    padding:15px;
+    border-radius:25px;
+    color:$color-white;
+    font-size:1em;
+    cursor:pointer;
+    bottom:0;
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:0px;
+    transition:700ms ease-out;
+
+    &:hover{
+     background:lighten($color-primary , 15%);
+     transform:scale(1.1);
+     transition:700ms ease-out;
+     };
+
+    &_menu{
+      margin:40px 0px 0px 38%;
+      font-size:1.2em;
+      width:300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+   
+      @include mobile-only{
+        width:50%;
+      }
+    }
+ 
+}
+
+/*footer*/
+
+@mixin footer{
+   width:100%;
+    background:$color-black1;
+    display:flex;
+    flex-direction:column;
+    padding:0px 0px 40px 0px;
+
+    &_title{
+        color:$color-white;
+        font-size:2em;
+        margin-bottom:20px;
+        font-family:'shrikhand';
+        width:auto;
+        margin-left:40px;
+    }
+
+    &_element{
+        color:$color-white;
+        text-decoration:none;
+        display:flex;
+        align-items:center;
+        height:30px;
+        font-size:1em;
+        width:auto;
+        margin-left:40px;
+
+         & i{
+             margin-right:12px;
+        }
+    }
+
+    &_element1 i{
+         margin-right:18px;
+    }
+
+};
+
+@mixin heart{
+       -webkit-text-stroke: 1.3px black;
+        color:$color-grey2;
+        cursor:pointer;
+        &:hover{
+            -webkit-text-stroke: $color-primary;
+            display: block;
+            animation:heart 1s ease both
+        }
+
+        &_home{
+            font-size:1.5em;
+            margin:0px 25px 0px 0px;
+        }
+
+        &_menu{
+            font-size:1em;
+        }
+}
+
+
+

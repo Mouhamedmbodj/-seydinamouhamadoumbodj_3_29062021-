@@ -1,0 +1,198 @@
+.header-menu{  
+    & a{
+        color:$color-black1;
+        font-size:1.5em;
+        margin-left:70px;
+
+
+       @include mobile-only{
+         margin:0px;
+         margin-left:5%;
+       }  
+  
+    }
+
+}
+
+/*menu section*/
+.menu-section{
+    width:100%;
+
+   & img{
+       width:100%;
+   }
+
+
+&_title{
+      margin:20px 0px 0px 20px;
+      width:90%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:2em;
+    };
+
+&_component_bloc{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    width:100%;
+    @include tab-only{
+     display:flex;
+     flex-direction:column;
+    }
+
+     @include mobile-only{
+        width:100%;
+        margin:0px;
+        };
+
+
+   };
+
+}
+
+
+.bloc-menu{
+    width:100%;
+    background:$color-grey2;
+    box-shadow:0px 10px 10px $color-black1;
+    border-radius:60px 60px 0px 0px ;
+    position:relative;
+    margin-top:-14%;
+    padding:20px 0px 100px 0px ;
+    height:auto;
+
+    @include tab-only{
+       position:relative;
+    }
+}
+
+
+/*menu-section_componenet*/
+
+.menu-section_component{
+    width:100%;
+    height:auto;
+    margin-bottom:25px;
+    
+    @include mobile-only{
+        width:100%;
+        }; 
+    
+    &_title{
+        color:$color-black1;
+        border-bottom:3px solid $color-tertiary;
+        width:30px;
+        font-size:1.3em;
+        margin-left:20px;
+    };
+
+    &_dishes{
+       width:95%;
+       height:80px;
+       display:flex;
+       border-radius:20px;
+       background:$color-white;
+       box-shadow:5px 5px 5px $dishes-shadow;
+       margin:20px 0px 20px 0px ;
+       margin-left:auto;
+       margin-right:auto;
+       padding-left:10px;
+       cursor:pointer;
+
+       @include mobile-only{
+        width:87%;
+        };
+
+        &_title{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            height:auto;
+            width:100%;
+            font-weight:bold;
+            overflow: hidden;
+            strong{
+                font-size:1.3em;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &_description{
+            display:flex;
+            justify-content:space-between;
+            width:auto;
+            color:$color-black1;
+            font-weight:normal;
+            font-size:1em;
+        }
+
+        &_price{
+            font-weight:bold;
+            margin-right:10px;
+        }
+    }
+}
+
+
+.element_description{
+      width:100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+
+
+/*menu section component transition*/
+.menu-section_component_transition
+{
+  transition:1s ease;
+  height:100%;
+  margin:0; 
+  width:15px;
+  background:$color-white;
+  border-radius:0px 20px 20px 0px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top: 0;
+    &_icone{
+       transform:rotate(-360deg);
+       transition:500ms ease ;
+       color:$color-white;
+       font-size:2em;
+       opacity:0;
+    }
+}
+
+.menu-section_component_dishes{
+           
+    &:hover > .menu-section_component_transition{   
+      width:20%;
+      transition: 2s ease ;
+      background:$color-tertiary;
+    } 
+    
+     &:hover > .menu-section_component_transition .menu-section_component_transition_icone {
+       transform:rotate(360deg);
+       transition:1.75s ease; 
+       opacity:1;
+    }
+}
+
+
+.entrees .menu-section_component_dishes{
+   animation: dishes 2s
+}
+
+
+.plats .menu-section_component_dishes{
+   animation: dishes 3s
+}
+
+.desserts .menu-section_component_dishes{
+    animation: dishes 4s
+}

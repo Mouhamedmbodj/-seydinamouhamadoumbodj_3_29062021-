@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./vendors/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/sass/vendors/fontawesome-free-5.15.3-web/css/all.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -13,18 +13,19 @@
     <title>Ohmyfood accueil</title>
 </head>
 <body>
-    <div class="container"><div class="loader"><span class="bienvenue">Bienvenue chez <strong>Ohmyfood</strong></span></div></div>
-    <div class="bloc-page bloc-page_home">
+
+   <div class="container"><div class="loader"><span class="bienvenue">Bienvenue chez <strong>Ohmyfood</strong></span></div></div>
          
-         <header class="header-home">
-            <div class="header-home_logo"><img src="./assets/images/logo/ohmyfood.png" alt="logo du site"/></div>
-            <a class="header-home_localisation" href="#"><i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p></a>
+  <div class="bloc-page">
+         <header class="header header_home">
+            <div class=" header_logo header_logo_home"><img src="./assets/images/logo/ohmyfood.png" alt="logo du site"/></div>
+            <a class="header_home_localisation" href="#"><i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p></a>
          </header>
 
          <section class="home-introduction">
              <h1>Réservez le menu qui vous convient</h1>
              <h2>Découvrez des restaurants d'exception, <br>selectionnés par nos soins.</h2>
-             <button class="button  home-button">Explorer nos restaurants</button>
+             <button class="button button_home">Explorer nos restaurants</button>
          </section>
 
          <section class="home-operations">
@@ -53,7 +54,7 @@
                     <p class="home-restaurant_element_title_first">La palette du goût</p>
                     <p class="home-restaurant_element_title_second">Ménilmontant</p>
                   </div>
-                  <span class="home-restaurant_icone"><i class="fas fa-heart"></i></span>
+                  <span class="heart heart_home"><i class="fas fa-heart"></i></span>
                </div>
 
              </a>
@@ -71,7 +72,7 @@
                       <p class="home-restaurant_element_title_first">La note enchantée</p>
                       <p class="home-restaurant_element_title_second">Charonne</p>
                     </div>
-                    <span class="home-restaurant_icone"><i class="fas fa-heart"></i></span>
+                    <span class="heart heart_home"><i class="fas fa-heart"></i></span>
                 </div>
 
               </a>
@@ -88,7 +89,7 @@
                       <p class="home-restaurant_element_title_first">À la française</p>
                       <p class="home-restaurant_element_title_second">Cité Rouge</p>
                     </div>
-                    <span class="home-restaurant_icone"><i class="fas fa-heart"></i></span>
+                    <span class="heart heart_home"><i class="fas fa-heart"></i></span>
                  </div>
 
               </a>
@@ -105,7 +106,7 @@
                       <p class="home-restaurant_element_title_first">Le délice des sens</p>
                       <p class="home-restaurant_element_title_second">Folie-Méricourt</p>
                     </div>
-                    <span class="home-restaurant_icone"><i class="fas fa-heart"></i></span>
+                    <span class="heart heart_home"><i class="fas fa-heart"></i></span>
                  </div>
               </a>
             </div>    
@@ -118,6 +119,6 @@
              <a class="footer_element footer_element3" href="#">Mentions légales</a>
              <a class="footer_element footer_element4" href="mailto:mbodjmouhamadou9@gmail.com">Contact</a>
          </footer>
-    </div>
+  </div>  
 </body>
 </html>
