@@ -49,7 +49,8 @@
 }
 @keyframes dishes {
   0% {
-    margin-top: 999px;
+    margin-top: 35px;
+    opacity: 0;
   }
   100% {
     margin-top: 0px;
@@ -96,12 +97,11 @@ body .bloc-page h1 {
   margin-left: auto;
   margin-right: auto;
   border: 0px;
-  transition: 700ms ease-out;
+  transition: 750ms ease;
 }
 .button:hover {
-  background: #bc95e9;
+  filter: brightness(125%);
   transform: scale(1.1);
-  transition: 700ms ease-out;
 }
 .button_menu {
   margin: 40px 0px 0px 38%;
@@ -189,13 +189,13 @@ body .bloc-page h1 {
 
 .heart {
   -webkit-text-stroke: 1.3px black;
-  color: #F9F9F9;
+  color: transparent;
   cursor: pointer;
 }
 .heart:hover {
   -webkit-text-stroke: #9356DC;
   display: block;
-  animation: heart 1s ease both;
+  animation: heart 1s ease forwards;
 }
 .heart_home {
   font-size: 1.5em;
@@ -446,6 +446,7 @@ body .bloc-page h1 {
   padding: 10px;
   color: #07815E;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .home-restaurant_element_child {
@@ -569,6 +570,11 @@ body .bloc-page h1 {
   padding: 20px 0px 100px 0px;
   height: auto;
 }
+@media screen and (max-width: 2000px) and (min-width: 1600px) {
+  .bloc-menu {
+    margin-top: -35%;
+  }
+}
 @media screen and (max-width: 1100px) {
   .bloc-menu {
     position: relative;
@@ -661,7 +667,7 @@ body .bloc-page h1 {
 }
 .menu-section_component_transition_icone {
   transform: rotate(-360deg);
-  transition: 500ms ease;
+  transition: 750ms ease;
   color: white;
   font-size: 2em;
   opacity: 0;
@@ -669,25 +675,25 @@ body .bloc-page h1 {
 
 .menu-section_component_dishes:hover > .menu-section_component_transition {
   width: 20%;
-  transition: 2s ease;
+  transition: 1s ease;
   background: #99E2D0;
 }
 .menu-section_component_dishes:hover > .menu-section_component_transition .menu-section_component_transition_icone {
   transform: rotate(360deg);
-  transition: 1.75s ease;
+  transition: 750ms ease;
   opacity: 1;
 }
 
 .entrees .menu-section_component_dishes {
-  animation: dishes 2s;
+  animation: dishes 2s ease forwards;
 }
 
 .plats .menu-section_component_dishes {
-  animation: dishes 3s;
+  animation: dishes 4s ease forwards;
 }
 
 .desserts .menu-section_component_dishes {
-  animation: dishes 4s;
+  animation: dishes 6s ease forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
