@@ -20,6 +20,7 @@
 
    & img{
        width:100%;
+       height:250px;
    }
 
 
@@ -59,17 +60,11 @@
     box-shadow:0px 10px 10px $color-black1;
     border-radius:60px 60px 0px 0px ;
     position:relative;
-    margin-top:-14%;
+    margin-top:-50px;
     padding:20px 0px 100px 0px ;
     height:auto;
-    
-    @media screen and (max-width:2000px) and (min-width:1600px) {
-      margin-top:-35%
-    }
 
-    @include tab-only{
-       position:relative;
-    }
+   
 }
 
 
@@ -189,15 +184,15 @@
 
 
 .entrees .menu-section_component_dishes{
-    animation: dishes  2s ease forwards;
+    animation: dishes  2s ease ;
  }
  
  
  .plats .menu-section_component_dishes{
-    animation: dishes  4s  ease forwards
+    animation: dishes  4s  ease 
  }
  
  .desserts .menu-section_component_dishes{
-     animation: dishes 6s ease forwards
+     animation: dishes 6s ease 
  }
  
